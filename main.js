@@ -17,4 +17,4 @@ app.use((error, req, res, next) => {
     console.error(error)
     res.sendStatus(500) // 에러가 발생했을 때 500 response를 보냄
 })
-app.listen(8080); // 8080포트로 출력
+app.listen(process.env.PORT || 8080); // 8080포트로 출력
