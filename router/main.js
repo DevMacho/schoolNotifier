@@ -2,18 +2,7 @@ import express from 'express';
 
 const router = express.Router();
 
-let anouncements = [
-    {
-        id: 1,
-        title: "오늘 급식 로제떡볶이",
-        content: "개맛있겠다"
-    },
-    {
-        id: 2,
-        title: "국어 수행평가 안내",
-        content: "받아쓰기: 샍으팁이굳옥과조아요눌어줏애요"
-    }
-]
+let anouncements = []
 
 router.get('/', (req, res, next) => {
     res.status(200).json(anouncements);
