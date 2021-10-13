@@ -1,6 +1,12 @@
 import express from 'express';
 import cors from 'cors';
 import mainRoute from './router/main.js';
+import http from 'http';
+
+setInterval(()=>{
+    console.log('every 10 minutes');
+    http.get('https://schoolnotifier.herokuapp.com/');
+}, 600000);
 
 const app = express();
 
